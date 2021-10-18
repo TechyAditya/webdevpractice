@@ -48,34 +48,20 @@ function ageInDays() {
 
 //Challenge 2: Cheems generator
 
-const Cheems = [
-    "https://github.com/adithyapaib/cheems/raw/master/Bike%20Cheems.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/AK47%20Cheems.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/Cute%20Doge.jpeg",
-    "https://github.com/adithyapaib/cheems/raw/master/Doge%20Lob.jpeg",
-    "https://github.com/adithyapaib/cheems/raw/master/bigandsmallcheems.png",
-    "https://github.com/adithyapaib/cheems/raw/master/cheems.png",
-    "https://github.com/adithyapaib/cheems/raw/master/cheems_bonk.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/cheems_oh.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/cheemscloud.png",
-    "https://github.com/adithyapaib/cheems/raw/master/cheemswithgun.png",
-    "https://github.com/adithyapaib/cheems/raw/master/coder%20memes.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/doge.png",
-    "https://github.com/adithyapaib/cheems/raw/master/dorime.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/tracksuitcheems.png",
-    "https://github.com/adithyapaib/cheems/raw/master/samuraicheems.png",
-    "https://github.com/adithyapaib/cheems/raw/master/images.jpeg",
-    "https://github.com/adithyapaib/cheems/raw/master/images%20(1).jpeg",
-    "https://github.com/adithyapaib/cheems/raw/master/human-dog.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/hey%20bhagwan.jpg",
-    "https://github.com/adithyapaib/cheems/raw/master/godzillavscheems.png",
-    "https://github.com/adithyapaib/cheems/raw/master/epiccheems.png"
-];
+let request = new XMLHttpRequest();
+request.open('GET', 'cheems.json')
+request.responseType = 'json';
+request.send();
+var obj;
+request.onload = function () {
+    obj = request.response;
+}
+
 
 function generateCheems() {
-    var cheemNo = Math.floor(Math.random() * 22);
+    var cheemNo = Math.floor(Math.random() * obj.length);
     var image = document.createElement('img');
     var div = document.getElementById('cheems-box-gen');
-    image.src = Cheems[cheemNo];
+    image.src = obj[cheemNo];
     div.appendChild(image);
 }
