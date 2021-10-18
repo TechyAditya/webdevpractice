@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-.flex-box-container-1, .cheems-box {
+.flex-box-container-1, .cheems-box, .cheems-buttons {
     display: flex;
     border: 1px solid black;
     padding: 10px;
@@ -14,7 +14,7 @@
     flex-wrap: wrap;
 }
 
-.flex-box-container-1 div {
+.flex-box-container-1 div, .cheems-buttons div {
     display: flex;
     padding: 10px;
     border: 1px solid black;

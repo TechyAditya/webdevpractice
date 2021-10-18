@@ -46,6 +46,8 @@ function ageInDays() {
     document.getElementById('flex-box-result').appendChild(h1);
 }
 
+//Challenge 2: Cheems generator
+
 const Cheems = [
     "https://github.com/adithyapaib/cheems/raw/master/Bike%20Cheems.jpg",
     "https://github.com/adithyapaib/cheems/raw/master/AK47%20Cheems.jpg",
