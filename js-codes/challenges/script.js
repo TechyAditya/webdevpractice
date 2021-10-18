@@ -71,9 +71,9 @@ const Cheems = [
     "https://github.com/adithyapaib/cheems/raw/master/godzillavscheems.png",
     "https://github.com/adithyapaib/cheems/raw/master/epiccheems.png"
 ];
-var cheemNo = Math.floor(Math.random() * 10);
 
 function generateCheems() {
+    var cheemNo = Math.floor(Math.random() * 22);
     var image = document.createElement('img');
     var div = document.getElementById('cheems-box-gen');
     image.src = Cheems[cheemNo];
