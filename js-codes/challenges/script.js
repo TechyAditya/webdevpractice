@@ -106,7 +106,7 @@ function finalMessage(results) {
     if (results === 1)
         return { 'message': "You won!", 'color': 'blue' };
     if (results === 0.5)
-        return { 'message': "It's a draw!", 'color': 'yellow' };
+        return { 'message': "It's a draw!", 'color': 'gold' };
 }
 
 function rpsFrontEnd(userChoice, botChoice, message)
